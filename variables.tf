@@ -1,8 +1,8 @@
-variable "newrelic_account_id" {
+variable "NEW_RELIC_ACCOUNT_ID" {
   type = number
 }
 
-variable "newrelic_api_key" {
+variable "NEW_RELIC_API_KEY" {
   type      = string
   sensitive = true
 }

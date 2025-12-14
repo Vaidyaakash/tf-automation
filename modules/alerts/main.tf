@@ -6,7 +6,7 @@ resource "newrelic_alert_policy" "this" {
 resource "newrelic_nrql_alert_condition" "this" {
   for_each = var.alert_conditions
 
-  account_id                   = var.account_id
+  account_id                   = var.NEW_RELIC_ACCOUNT_ID 
   policy_id                    = newrelic_alert_policy.this.id
   type                          = "static"
   name                          = each.value.name

@@ -1,5 +1,5 @@
-newrelic_account_id = var.newrelic_account_id
-newrelic_api_key    = var.newrelic_api_key
+NEW_RELIC_ACCOUNT_ID = var.NEW_RELIC_ACCOUNT_ID
+NEW_RELIC_API_KEY    = var.NEW_RELIC_API_KEY
 
 policy_name = "terraform-automation-v2"
 

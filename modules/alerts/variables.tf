@@ -1,10 +1,5 @@
-variable "newrelic_account_id" {
+variable "account_id" {
   type = number
-}
-
-variable "newrelic_api_key" {
-  type      = string
-  sensitive = true
 }
 
 variable "policy_name" {
@@ -12,7 +7,6 @@ variable "policy_name" {
 }
 
 variable "alert_conditions" {
-  description = "Map of NRQL alert conditions"
   type = map(object({
     name               = string
     description        = string

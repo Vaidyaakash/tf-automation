@@ -32,11 +32,14 @@ jobs:
         run: terraform validate
 
       - name: Terraform Plan
-        run: terraform plan \
-          -var="newrelic_api_key=${{ secrets.NEW_RELIC_API_KEY }}" \
-          -var="newrelic_account_id=${{ secrets.NEW_RELIC_ACCOUNT_ID }}"
+        run: |
+          terraform plan \
+            -var="newrelic_api_key=${{ secrets.NEW_RELIC_API_KEY }}" \
+            -var="newrelic_account_id=${{ secrets.NEW_RELIC_ACCOUNT_ID }}"
 
       - name: Terraform Apply
-        run: terraform apply -auto-approve \
-          -var="newrelic_api_key=${{ secrets.NEW_RELIC_API_KEY }}" \
-          -var="newrelic_account_id=${{ secrets.NEW_RELIC_ACCOUNT_ID }}"
+        run: |
+          terraform apply -auto-approve \
+            -var="newrelic_api_key=${{ secrets.NEW_RELIC_API_KEY }}" \
+            -var="newrelic_account_id=${{ secrets.NEW_RELIC_ACCOUNT_ID }}"
+

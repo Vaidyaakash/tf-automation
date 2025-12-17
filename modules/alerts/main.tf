@@ -22,7 +22,7 @@ resource "newrelic_nrql_alert_condition" "foo" {
   signal_seasonality = "weekly"
 
   nrql {
-    query = each.value.query
+    query = var.query
   }
 
   critical {

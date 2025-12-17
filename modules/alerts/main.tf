@@ -41,12 +41,12 @@ resource "newrelic_nrql_alert_condition" "foo" {
 }
 
 
-resource "newrelic_entity_tags" "my_condition_entity_tags" {
-  guid = newrelic_nrql_alert_condition.foo.entity_guid
+# resource "newrelic_entity_tags" "my_condition_entity_tags" {
+#   guid = newrelic_nrql_alert_condition.foo.entity_guid
 
-  tag {
-    key = "my-tag"
-    values = ["lenovo-laptop"]
-  }
+#   tag {
+#     key = "my-tag"
+#     values = ["lenovo-laptop"]
+#   }
 
-}
+# }

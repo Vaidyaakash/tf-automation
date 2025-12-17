@@ -6,7 +6,7 @@ resource "newrelic_nrql_alert_condition" "foo" {
   # for_each = var.alert_conditions
 
   type                         = "baseline"
-  account_id                   = var.account_id
+  account_id                   = 3679990
   name                         = var.name
   policy_id                    = newrelic_alert_policy.this.id
   description                  = var.description
@@ -41,12 +41,10 @@ resource "newrelic_nrql_alert_condition" "foo" {
 }
 
 
-# resource "newrelic_entity_tags" "my_condition_entity_tags" {
-#   guid = newrelic_nrql_alert_condition.foo.entity_guid
-
-#   tag {
-#     key = "my-tag"
-#     values = ["lenovo-laptop"]
-#   }
-
-# }
+resource "newrelic_entity_tags" "my_condition_entity_tags" {
+  guid = newrelic_nrql_alert_condition.foo.entity_guid
+  tag {
+    key    = "my-tag"
+    values = ["lenovo-laptop"]
+  }
+}

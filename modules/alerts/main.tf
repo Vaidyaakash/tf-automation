@@ -3,13 +3,13 @@ resource "newrelic_alert_policy" "this" {
 }
 
 resource "newrelic_nrql_alert_condition" "foo" {
-  for_each = var.alert_conditions
+  # for_each = var.alert_conditions
 
   type                         = "baseline"
   account_id                   = var.account_id
-  name                         = each.value.name
+  name                         = var.name
   policy_id                    = newrelic_alert_policy.this.id
-  description                  = each.value.description
+  description                  = var.description
   enabled                      = true
   runbook_url                  = "https://www.example.com"
   violation_time_limit_seconds = 3600
@@ -27,14 +27,14 @@ resource "newrelic_nrql_alert_condition" "foo" {
 
   critical {
     operator              = "above"
-    threshold             = each.value.critical_threshold
+    threshold             = var.critical_threshold
     threshold_duration    = 300
     threshold_occurrences = "all"
   }
 
   warning {
     operator              = "above"
-    threshold             = each.value.warning_threshold
+    threshold             = var.warning_threshold
     threshold_duration    = 600
     threshold_occurrences = "all"
   }

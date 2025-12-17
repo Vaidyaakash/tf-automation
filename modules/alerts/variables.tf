@@ -1,6 +1,6 @@
-variable "account_id" {
-  type = number
-}
+# variable "account_id" {
+#   type = number
+# }
 
 variable "policy_name" {
   type = string

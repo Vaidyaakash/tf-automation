@@ -2,12 +2,11 @@ resource "newrelic_alert_policy" "this" {
   name = var.policy_name
 }
 
-
 resource "newrelic_nrql_alert_condition" "foo" {
   for_each = var.alert_conditions
 
   type                         = "baseline"
-  account_id                   = 12345678
+  account_id                   = var.account_id
   name                         = each.value.name
   policy_id                    = newrelic_alert_policy.this.id
   description                  = each.value.description

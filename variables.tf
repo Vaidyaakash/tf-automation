@@ -1,11 +1,12 @@
-variable "NEW_RELIC_ACCOUNT_ID" {
+variable "newrelic_account_id" {
   type = number
 }
 
-variable "NEW_RELIC_API_KEY" {
+variable "newrelic_api_key" {
   type      = string
   sensitive = true
 }
+
 
 variable "policy_name" {
   type = string

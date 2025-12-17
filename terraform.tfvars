@@ -1,4 +1,4 @@
-policy_name         = "terraform-automation-v2s"
+policy_name         = "terraform-automation-by-akash"
 
 alert_conditions = {
   condition_1 = {

@@ -1,12 +1,3 @@
-# terraform {
-#   required_providers {
-#     newrelic = {
-#       source  = "newrelic/newrelic"
-#       version = "3.76.3"
-#     }
-#   }
-# }
-
 terraform {
   # required_version = ">= 1.5.0"
 

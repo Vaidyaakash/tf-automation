@@ -4,13 +4,13 @@ variable "newrelic_account_id" {
 
 variable "newrelic_api_key" {
   type      = string
-  sensitive = true
+  # sensitive = true
 }
 
 
-variable "policy_name" {
-  type = string
-}
+# variable "policy_name" {
+#   type = string
+# }
 
 # variable "name" {
 #   description = "Map of NRQL alert conditions"
@@ -23,22 +23,22 @@ variable "policy_name" {
 #   }))
 # }
 
-variable "name" {
-  type = any
-}
+# variable "name" {
+#   type = any
+# }
 
-variable "description" {
-  type = any
-}
+# variable "description" {
+#   type = any
+# }
 
-variable "query" {
-  type = any
-}
+# variable "query" {
+#   type = any
+# }
 
-variable "critical_threshold" {
-  type = any
-}
+# variable "critical_threshold" {
+#   type = any
+# }
 
-variable "warning_threshold" {
-  type = any
-}
+# variable "warning_threshold" {
+#   type = any
+# }

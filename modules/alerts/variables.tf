@@ -15,9 +15,9 @@ variable "policy_name" {
 #     warning_threshold  = number
 #   }))
 # }
-variable "account_id" {
-  type = number
-}
+# variable "account_id" {
+#   type = number
+# }
 
 variable "name" {
   type = any

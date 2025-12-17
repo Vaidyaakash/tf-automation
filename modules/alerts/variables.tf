@@ -16,11 +16,6 @@ variable "alert_conditions" {
     warning_threshold  = number
   }))
 }
-variable "NEW_RELIC_ACCOUNT_ID" {
+variable "account_id" {
   type = number
-}
-
-variable "NEW_RELIC_API_KEY" {
-  type      = string
-  sensitive = true
 }

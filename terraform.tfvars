@@ -1,6 +1,3 @@
-# NEW_RELIC_ACCOUNT_ID = var.NEW_RELIC_ACCOUNT_ID
-# NEW_RELIC_API_KEY    = var.NEW_RELIC_API_KEY
-
 policy_name = "terraform-automation-v2"
 
 alert_conditions = {
